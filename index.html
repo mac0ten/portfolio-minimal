@@ -24,8 +24,7 @@
         (function () {
             try {
                 var savedTheme = localStorage.getItem('portfolio-theme');
-                var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-                var theme = savedTheme || (prefersLight ? 'light' : 'dark');
+                var theme = savedTheme || 'light';
                 if (theme === 'light') {
                     document.documentElement.setAttribute('data-theme', 'light');
                 }
@@ -2081,9 +2080,7 @@
                 }
             } catch (e) {}
 
-            return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches
-                ? 'light'
-                : 'dark';
+            return 'light';
         }
 
         function applyTheme(theme, persist = true) {
