@@ -1235,9 +1235,18 @@
             box-shadow: 0 14px 30px rgba(39, 150, 255, 0.45);
         }
 
-        .contact-email {
+        :root:not([data-theme='light']) .contact-email {
             color: #7ed8ff;
             border-bottom-color: rgba(255, 255, 255, 0.16);
+        }
+
+        :root[data-theme='light'] .contact-email {
+            color: var(--glyph-color-active);
+            border-bottom-color: rgba(67, 102, 153, 0.32);
+        }
+
+        :root[data-theme='light'] .contact-email:hover {
+            opacity: 0.86;
         }
 
         .custom-cursor {
@@ -1350,7 +1359,7 @@
         <main class="hero">
             <h2 class="greeting">Hey, I'm Rodel</h2>
             <h1 class="title">Software Engineer</h1>
-            <a class="resume-cta" href="https://drive.google.com/uc?export=download&id=1E6iE2j5aZaqrtoU6Y7GXpt7pIrbhVoCk" target="_blank" rel="noopener noreferrer" aria-label="Download Rodel Vasquez resume">
+            <a class="resume-cta" href="https://drive.google.com/file/d/1E6iE2j5aZaqrtoU6Y7GXpt7pIrbhVoCk/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Download Rodel Vasquez resume">
                 <span class="glyph" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 3v12"/>
